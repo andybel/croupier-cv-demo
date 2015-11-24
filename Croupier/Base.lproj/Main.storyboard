@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Croupier" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-rm-NKl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.32549019610000002" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="glM-EH-gUz"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jHH-G2-Ewj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sbR-3F-WxD"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-7x-USJ">
+                                <rect key="frame" x="51" y="532" width="97" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lPg-ja-19a"/>
+                                    <constraint firstAttribute="width" constant="97" id="raf-Nv-RNs"/>
+                                </constraints>
+                                <state key="normal" title="GRID"/>
+                                <connections>
+                                    <action selector="switchLayoutToGridAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAl-UY-fFH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7U9-11-xy8">
+                                <rect key="frame" x="146" y="532" width="97" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Rz8-1I-GGa"/>
+                                    <constraint firstAttribute="height" constant="48" id="lzF-GX-KUv"/>
+                                </constraints>
+                                <state key="normal" title="DECK"/>
+                                <connections>
+                                    <action selector="switchLayoutToDeckAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSK-kX-h6b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-yb-bkL">
+                                <rect key="frame" x="251" y="532" width="97" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Fqj-HK-fWA"/>
+                                    <constraint firstAttribute="width" constant="97" id="ZIL-j6-nJR"/>
+                                </constraints>
+                                <state key="normal" title="FAN"/>
+                                <connections>
+                                    <action selector="switchLayoutToFanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcN-f3-Oew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nD-3N-gpR">
+                                <rect key="frame" x="356" y="532" width="97" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8wZ-XY-bzp"/>
+                                    <constraint firstAttribute="width" constant="97" id="TMj-im-PYr"/>
+                                </constraints>
+                                <state key="normal" title="SCATTER"/>
+                                <connections>
+                                    <action selector="switchLayoutToScatterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQR-Oz-s2F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kpf-yb-bkL" firstAttribute="leading" secondItem="vjc-7x-USJ" secondAttribute="trailing" constant="103" id="3fB-c5-5Sf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vjc-7x-USJ" secondAttribute="bottom" constant="20" id="DfL-P0-r6l"/>
+                            <constraint firstItem="3nD-3N-gpR" firstAttribute="top" secondItem="L6b-rm-NKl" secondAttribute="bottom" constant="-68" id="Ft6-8X-Fka"/>
+                            <constraint firstItem="7U9-11-xy8" firstAttribute="width" secondItem="vjc-7x-USJ" secondAttribute="width" id="N0X-vy-63Z"/>
+                            <constraint firstItem="L6b-rm-NKl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QQ1-JS-P2S"/>
+                            <constraint firstItem="L6b-rm-NKl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RQz-ff-K2N"/>
+                            <constraint firstItem="7U9-11-xy8" firstAttribute="centerY" secondItem="vjc-7x-USJ" secondAttribute="centerY" id="UJp-2F-587"/>
+                            <constraint firstAttribute="trailing" secondItem="L6b-rm-NKl" secondAttribute="trailing" id="YMZ-8R-0bB"/>
+                            <constraint firstItem="vjc-7x-USJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="51" id="dUU-Xt-CYC"/>
+                            <constraint firstItem="3nD-3N-gpR" firstAttribute="leading" secondItem="Kpf-yb-bkL" secondAttribute="trailing" constant="8" id="fAt-1j-MNG"/>
+                            <constraint firstItem="Kpf-yb-bkL" firstAttribute="centerY" secondItem="vjc-7x-USJ" secondAttribute="centerY" id="nH9-A0-Ua1"/>
+                            <constraint firstItem="7U9-11-xy8" firstAttribute="leading" secondItem="vjc-7x-USJ" secondAttribute="trailing" constant="-2" id="peq-TZ-NC0"/>
+                            <constraint firstItem="7U9-11-xy8" firstAttribute="height" secondItem="vjc-7x-USJ" secondAttribute="height" id="qUn-J9-d7e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L6b-rm-NKl" secondAttribute="bottom" id="sHI-xn-KvD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="L6b-rm-NKl" id="9HN-g8-sVe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339" y="499"/>
         </scene>
     </scenes>
 </document>

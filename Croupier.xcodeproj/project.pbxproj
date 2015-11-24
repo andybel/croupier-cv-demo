@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230B4C741C03348800FDCA5C /* CroupierCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B4C721C03348800FDCA5C /* CroupierCollectionViewCell.swift */; };
+		230B4C751C03348800FDCA5C /* CroupierCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230B4C731C03348800FDCA5C /* CroupierCollectionViewCell.xib */; };
+		2319893D1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2319893C1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift */; };
+		2319893F1BFF58B000F4C94A /* DeckCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2319893E1BFF58B000F4C94A /* DeckCollectionViewLayout.swift */; };
+		231989411BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231989401BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift */; };
+		2362DD5D1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362DD5C1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift */; };
 		237E2F6E1BF8D4CC00CDF37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F6D1BF8D4CC00CDF37B /* AppDelegate.swift */; };
 		237E2F701BF8D4CC00CDF37B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F6F1BF8D4CC00CDF37B /* ViewController.swift */; };
 		237E2F731BF8D4CC00CDF37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E2F711BF8D4CC00CDF37B /* Main.storyboard */; };
 		237E2F751BF8D4CC00CDF37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237E2F741BF8D4CC00CDF37B /* Assets.xcassets */; };
 		237E2F781BF8D4CC00CDF37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E2F761BF8D4CC00CDF37B /* LaunchScreen.storyboard */; };
+		237E2F801BF8D63C00CDF37B /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */; };
+		237E2F861BF8D9B000CDF37B /* CroupierStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */; };
+		237E2F881BF8DA0D00CDF37B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F871BF8DA0D00CDF37B /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230B4C721C03348800FDCA5C /* CroupierCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroupierCollectionViewCell.swift; sourceTree = "<group>"; };
+		230B4C731C03348800FDCA5C /* CroupierCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CroupierCollectionViewCell.xib; sourceTree = "<group>"; };
+		2319893C1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
+		2319893E1BFF58B000F4C94A /* DeckCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCollectionViewLayout.swift; sourceTree = "<group>"; };
+		231989401BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterCollectionViewLayout.swift; sourceTree = "<group>"; };
+		2362DD5C1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		237E2F6A1BF8D4CC00CDF37B /* Croupier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Croupier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E2F6D1BF8D4CC00CDF37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237E2F6F1BF8D4CC00CDF37B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +37,9 @@
 		237E2F741BF8D4CC00CDF37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		237E2F771BF8D4CC00CDF37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		237E2F791BF8D4CC00CDF37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
+		237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroupierStyleKit.swift; sourceTree = "<group>"; };
+		237E2F871BF8DA0D00CDF37B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +72,21 @@
 		237E2F6C1BF8D4CC00CDF37B /* Croupier */ = {
 			isa = PBXGroup;
 			children = (
+				230B4C721C03348800FDCA5C /* CroupierCollectionViewCell.swift */,
+				230B4C731C03348800FDCA5C /* CroupierCollectionViewCell.xib */,
+				237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */,
 				237E2F6D1BF8D4CC00CDF37B /* AppDelegate.swift */,
 				237E2F6F1BF8D4CC00CDF37B /* ViewController.swift */,
 				237E2F711BF8D4CC00CDF37B /* Main.storyboard */,
 				237E2F741BF8D4CC00CDF37B /* Assets.xcassets */,
 				237E2F761BF8D4CC00CDF37B /* LaunchScreen.storyboard */,
 				237E2F791BF8D4CC00CDF37B /* Info.plist */,
+				237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */,
+				237E2F871BF8DA0D00CDF37B /* CardView.swift */,
+				2319893C1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift */,
+				2319893E1BFF58B000F4C94A /* DeckCollectionViewLayout.swift */,
+				231989401BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift */,
+				2362DD5C1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift */,
 			);
 			path = Croupier;
 			sourceTree = "<group>";
@@ -96,6 +123,7 @@
 				TargetAttributes = {
 					237E2F691BF8D4CC00CDF37B = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = HRP7WJWH3Y;
 					};
 				};
 			};
@@ -122,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230B4C751C03348800FDCA5C /* CroupierCollectionViewCell.xib in Resources */,
 				237E2F781BF8D4CC00CDF37B /* LaunchScreen.storyboard in Resources */,
 				237E2F751BF8D4CC00CDF37B /* Assets.xcassets in Resources */,
 				237E2F731BF8D4CC00CDF37B /* Main.storyboard in Resources */,
@@ -135,7 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2319893D1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift in Sources */,
+				237E2F801BF8D63C00CDF37B /* CircularCollectionViewLayout.swift in Sources */,
 				237E2F701BF8D4CC00CDF37B /* ViewController.swift in Sources */,
+				2362DD5D1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift in Sources */,
+				237E2F861BF8D9B000CDF37B /* CroupierStyleKit.swift in Sources */,
+				2319893F1BFF58B000F4C94A /* DeckCollectionViewLayout.swift in Sources */,
+				237E2F881BF8DA0D00CDF37B /* CardView.swift in Sources */,
+				231989411BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift in Sources */,
+				230B4C741C03348800FDCA5C /* CroupierCollectionViewCell.swift in Sources */,
 				237E2F6E1BF8D4CC00CDF37B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Croupier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bellovic.Croupier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Croupier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bellovic.Croupier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +329,7 @@
 				237E2F7E1BF8D4CC00CDF37B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
