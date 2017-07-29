@@ -10,13 +10,13 @@ import UIKit
 
 class CircularCollectionViewLayout: MasterCollectionViewLayout {
 
-  var angleAtExtreme: CGFloat {
-      return collectionView!.numberOfItemsInSection(0) > 0 ? -CGFloat(collectionView!.numberOfItemsInSection(0) - 1) * anglePerItem : 0
-  }
-  
-  var angle: CGFloat {
-      return angleAtExtreme * collectionView!.contentOffset.x / (collectionViewContentSize().width - CGRectGetWidth(collectionView!.bounds))
-  }
+      var angleAtExtreme: CGFloat {
+          return collectionView!.numberOfItemsInSection(0) > 0 ? -CGFloat(collectionView!.numberOfItemsInSection(0) - 1) * anglePerItem : 0
+      }
+      
+      var angle: CGFloat {
+          return angleAtExtreme * collectionView!.contentOffset.x / (collectionViewContentSize().width - CGRectGetWidth(collectionView!.bounds))
+      }
   
     var radius: CGFloat = 2000 {
       didSet {
@@ -36,10 +36,6 @@ class CircularCollectionViewLayout: MasterCollectionViewLayout {
   
   override func prepareLayout() {
     
-        super.prepareLayout()
-    
-        self.itemSize = CGSizeMake(240, 360)
-    
         let centerX = collectionView!.contentOffset.x + (CGRectGetWidth(collectionView!.bounds) / 2.0)
     
         let anchorPointY = ((itemSize.height / 2.0) + radius) / itemSize.height
@@ -51,7 +47,6 @@ class CircularCollectionViewLayout: MasterCollectionViewLayout {
             attributes.center = CGPoint(x: centerX, y: CGRectGetMidY(self.collectionView!.bounds))
             attributes.angle = self.angle + (self.anglePerItem * CGFloat(i))
             attributes.anchorpoint = CGPoint(x: 0.5, y: anchorPointY)
-            attributes.layoutType = .fan
             
             return attributes
         

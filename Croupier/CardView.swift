@@ -12,10 +12,12 @@ import UIKit
 
 class CardView: UIView {
 
-    override func awakeFromNib() {
-        backgroundColor = UIColor.clearColor()
+    var card:Card? {
+        didSet {
+            suiteId = card?.suiteId
+            cardNumber = card?.number
+        }
     }
-    
     var cardTxt:String?
     var suiteId:CGFloat? {
         didSet {
@@ -26,16 +28,19 @@ class CardView: UIView {
             }
         }
     }
-    var textCol:UIColor?
-    var cardNumber:CGFloat? {
+    
+    private var textCol:UIColor?
+    private var cardNumber:CGFloat? {
         didSet {
-            
             cardTxt = "\(Int(cardNumber!))"
-            
             setNeedsDisplay()
         }
     }
 
+    
+    override func awakeFromNib() {
+        backgroundColor = UIColor.clearColor()
+    }
     
     override func drawRect(rect: CGRect) {
         
@@ -49,7 +54,10 @@ class CardView: UIView {
             suiteId = 1
         }
         
-        CroupierStyleKit.drawCard(frame: rect, textCol: textCol!, cardIdTxt: cardTxt!, suiteId: suiteId!)
+        let testSize = CGSize(width: rect.width * 0.95, height: rect.height * 0.95)
+        
+        CroupierStyleKit.drawCard(cardSize: testSize, textCol: textCol!, cardIdTxt: cardTxt!, suiteId: suiteId!)
+    
     }
 
 }

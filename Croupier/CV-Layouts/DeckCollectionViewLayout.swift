@@ -12,7 +12,7 @@ class DeckCollectionViewLayout: MasterCollectionViewLayout {
     
     override func prepareLayout() {
         
-        self.itemSize = CGSizeMake(240, 360)
+        let padding:CGFloat = 5.0
         
         attributesList = (0..<self.collectionView!.numberOfItemsInSection(0)).map { (i) ->
             
@@ -20,15 +20,16 @@ class DeckCollectionViewLayout: MasterCollectionViewLayout {
             
             let attributes = CroupierCollectionViewLayoutAttributes(forCellWithIndexPath: NSIndexPath(forItem: i, inSection: 0))
             
-            let centerX = ((self.collectionView?.center.x)! - (self.itemSize.width / 2))
-            let centerY = ((self.collectionView?.center.y)! - (self.itemSize.height / 2))
+            let xOffset = (self.collectionView!.center.x - (CGFloat(self.collectionView!.numberOfItemsInSection(0)) * (padding / 2.0)))
+            let centerX = (xOffset - (self.itemSize.width / 2))
             
-            let cellOrigin = CGPoint(x: centerX + (CGFloat(i) * 5.0), y: centerY + (CGFloat(i) * 5.0))
+            let yOffset = (self.collectionView!.center.y - (CGFloat(self.collectionView!.numberOfItemsInSection(0)) * (padding / 4.0)))
+            let centerY = (yOffset - (self.itemSize.height / 2))
+            
+            let cellOrigin = CGPoint(x: centerX + (CGFloat(i) * padding), y: centerY + (CGFloat(i) * (padding / 2.0)))
             
             attributes.frame = CGRect(x: cellOrigin.x, y: cellOrigin.y, width: self.itemSize.width, height: self.itemSize.height)
             
-            attributes.angle = 0
-            attributes.anchorpoint = CGPoint(x: 0.5, y: 0.5)
             attributes.zIndex = i
             
             return attributes
@@ -39,8 +40,7 @@ class DeckCollectionViewLayout: MasterCollectionViewLayout {
     
     override func collectionViewContentSize() -> CGSize {
         
-        return CGSize(width: CGFloat(collectionView!.numberOfItemsInSection(0)) * itemSize.width,
-            height: CGRectGetHeight(collectionView!.bounds))
+        return (self.collectionView?.bounds.size)!//CGSize(width: CGFloat(collectionView!.numberOfItemsInSection(0)) * itemSize.width, height: CGRectGetHeight(collectionView!.bounds))
         
     }
     

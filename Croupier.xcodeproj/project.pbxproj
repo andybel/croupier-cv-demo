@@ -21,6 +21,10 @@
 		237E2F801BF8D63C00CDF37B /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */; };
 		237E2F861BF8D9B000CDF37B /* CroupierStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */; };
 		237E2F881BF8DA0D00CDF37B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E2F871BF8DA0D00CDF37B /* CardView.swift */; };
+		23D1ACC51C07104C00096B89 /* CardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D1ACC41C07104C00096B89 /* CardsDataSource.swift */; };
+		23D1ACC71C0757EA00096B89 /* SpreadCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D1ACC61C0757EA00096B89 /* SpreadCollectionViewLayout.swift */; };
+		23D1ACC91C07625800096B89 /* SelectedCardsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D1ACC81C07625800096B89 /* SelectedCardsCollectionViewLayout.swift */; };
+		23D1ACCB1C076D1400096B89 /* CroupierControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D1ACCA1C076D1400096B89 /* CroupierControlPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
 		237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroupierStyleKit.swift; sourceTree = "<group>"; };
 		237E2F871BF8DA0D00CDF37B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		23D1ACC41C07104C00096B89 /* CardsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsDataSource.swift; sourceTree = "<group>"; };
+		23D1ACC61C0757EA00096B89 /* SpreadCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadCollectionViewLayout.swift; sourceTree = "<group>"; };
+		23D1ACC81C07625800096B89 /* SelectedCardsCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCardsCollectionViewLayout.swift; sourceTree = "<group>"; };
+		23D1ACCA1C076D1400096B89 /* CroupierControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroupierControlPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235DBD771C3FBEAB0088639F /* CV-Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				23D1ACC81C07625800096B89 /* SelectedCardsCollectionViewLayout.swift */,
+				237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */,
+				2319893C1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift */,
+				2319893E1BFF58B000F4C94A /* DeckCollectionViewLayout.swift */,
+				231989401BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift */,
+				2362DD5C1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift */,
+				23D1ACC61C0757EA00096B89 /* SpreadCollectionViewLayout.swift */,
+			);
+			path = "CV-Layouts";
+			sourceTree = "<group>";
+		};
 		237E2F611BF8D4CC00CDF37B = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,7 @@
 		237E2F6C1BF8D4CC00CDF37B /* Croupier */ = {
 			isa = PBXGroup;
 			children = (
+				235DBD771C3FBEAB0088639F /* CV-Layouts */,
 				230B4C721C03348800FDCA5C /* CroupierCollectionViewCell.swift */,
 				230B4C731C03348800FDCA5C /* CroupierCollectionViewCell.xib */,
 				237E2F851BF8D9B000CDF37B /* CroupierStyleKit.swift */,
@@ -81,12 +104,9 @@
 				237E2F741BF8D4CC00CDF37B /* Assets.xcassets */,
 				237E2F761BF8D4CC00CDF37B /* LaunchScreen.storyboard */,
 				237E2F791BF8D4CC00CDF37B /* Info.plist */,
-				237E2F7F1BF8D63C00CDF37B /* CircularCollectionViewLayout.swift */,
 				237E2F871BF8DA0D00CDF37B /* CardView.swift */,
-				2319893C1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift */,
-				2319893E1BFF58B000F4C94A /* DeckCollectionViewLayout.swift */,
-				231989401BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift */,
-				2362DD5C1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift */,
+				23D1ACC41C07104C00096B89 /* CardsDataSource.swift */,
+				23D1ACCA1C076D1400096B89 /* CroupierControlPanel.swift */,
 			);
 			path = Croupier;
 			sourceTree = "<group>";
@@ -165,14 +185,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2319893D1BFF4F2F00F4C94A /* GridCollectionViewLayout.swift in Sources */,
+				23D1ACC91C07625800096B89 /* SelectedCardsCollectionViewLayout.swift in Sources */,
 				237E2F801BF8D63C00CDF37B /* CircularCollectionViewLayout.swift in Sources */,
+				23D1ACCB1C076D1400096B89 /* CroupierControlPanel.swift in Sources */,
 				237E2F701BF8D4CC00CDF37B /* ViewController.swift in Sources */,
 				2362DD5D1C00C46D002C1D64 /* ScatterCollectionViewLayout.swift in Sources */,
 				237E2F861BF8D9B000CDF37B /* CroupierStyleKit.swift in Sources */,
 				2319893F1BFF58B000F4C94A /* DeckCollectionViewLayout.swift in Sources */,
 				237E2F881BF8DA0D00CDF37B /* CardView.swift in Sources */,
 				231989411BFF5FFF00F4C94A /* MasterCollectionViewLayout.swift in Sources */,
+				23D1ACC51C07104C00096B89 /* CardsDataSource.swift in Sources */,
 				230B4C741C03348800FDCA5C /* CroupierCollectionViewCell.swift in Sources */,
+				23D1ACC71C0757EA00096B89 /* SpreadCollectionViewLayout.swift in Sources */,
 				237E2F6E1BF8D4CC00CDF37B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,8 +19,6 @@ class CroupierCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
         }
     }
     
-    var layoutType:CroupierLayoutType?
-    
     //  Subclasses of UICollectionViewLayoutAttributes need to conform to the NSCopying protocol because the attribute’s objects can be copied internally when the collection view is performing a layout. You override this method to guarantee that both the anchorPoint and angle properties are set when the object is copied.
     override func copyWithZone(zone: NSZone) -> AnyObject {
         
@@ -34,10 +32,17 @@ class CroupierCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
 }
 
 class MasterCollectionViewLayout: UICollectionViewLayout {
-
-    var selectCardIdx:Int = 999
+    
+    var itemWidth:CGFloat = 120.0 {
+        didSet {
+            self.itemSize.width = itemWidth
+            self.itemSize.height = (itemWidth * 1.6666)
+            self.invalidateLayout()
+        }
+    }
     
     var itemSize = CGSize(width: 120, height: 200)
+    
     var attributesList = [CroupierCollectionViewLayoutAttributes]()
     
     // This tells the collection view that you’ll be using CroupierCollectionViewLayoutAttributes,
@@ -51,14 +56,11 @@ class MasterCollectionViewLayout: UICollectionViewLayout {
     }
     
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        
-        let item = attributesList[indexPath.row]
-        
-        return item
+        return attributesList[indexPath.row]
     }
     
     override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
-        return false
+        return true
     }
     
 }
